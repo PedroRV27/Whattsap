@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clon de WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="contenedor-login">
+        <h2>Iniciar sesión</h2>
+        <form id="formulario-login">
+            <input type="text" id="nombre-usuario" placeholder="Ingresa tu nombre de usuario" required><br>
+            <input type="text" id="estado" placeholder="Ingresa tu estado" required><br>
+            <h3>Elige tu avatar:</h3>
+            <div id="contenedor-avatar">
+                <img src="avatar1.png" alt="avatar1">
+                <img src="avatar2.png" alt="avatar2">
+                <img src="avatar3.png" alt="avatar3">
+            </div>
+            <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+            <label for="avatar-upload" id="avatar-label">Seleccionar imagen</label>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <div class="contenedor-chat" id="contenedor-chat" style="display: none;">
+        <div class="contenedor-usuarios">
+            <h3>Usuarios en línea</h3>
+            <ul id="usuarios"></ul>
+        </div>
+        <select id="sala" style="display: none;">
+            <option value="sala1">Sala 1</option>
+            <option value="sala2">Sala 2</option>
+            <option value="sala3">Sala 3</option>
+        </select>
+        <div class="contenedor-mensajes">
+            <div id="mensajes-chat"></div>
+            <div id="estado-escribiendo"></div>
+            <form id="formulario-mensaje">
+                <input type="text" id="entrada-mensaje" placeholder="Escribe tu mensaje">
+                <input type="file" id="archivo" accept="image/*, .pdf, .doc, .docx, .txt"> 
+                <button type="submit" id="boton-enviar-mensaje">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="cliente.js"></script>    
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-chat {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.contenedor-usuarios {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.contenedor-usuarios h3 {
+    margin-top: 0;
+}
+
+#mensajes-chat {
+    border: 1px solid #ccc;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    width: calc(100% - 220px);
+}
+
+#entrada-mensaje {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#boton-enviar-mensaje {
+    padding: 5px 10px;
+}
+
+/* Estilos adicionales */
+#contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#formulario-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#contenedor-avatar {
+    display: flex;
+    gap: 10px;
+}
+
+#contenedor-avatar img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#contenedor-avatar img.selected {
+    border: 2px solid blue;
+}
+
+.mensaje {
+    margin-bottom: 10px;
+}
+
+.imagen-enviada {
+    max-width: 200px; /* Tamaño fijo para las imágenes */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.remite {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.avatar-usuario {
+    width: 30px; /* Ajusta el tamaño del avatar según sea necesario */
+    height: 30px; /* Ajusta el tamaño del avatar según sea necesario */
+    border-radius: 50%; /* Para que el avatar sea redondo */
+    margin-right: 10px; /* Espacio entre el avatar y el nombre del usuario */
+}
+
+.usuario-container {
+    display: flex; /* Para alinear el avatar y el nombre del usuario horizontalmente */
+    align-items: center; /* Para alinear verticalmente el avatar y el nombre del usuario */
+}
+
+.contenedor-usuarios {
+    padding: 0; /* Elimina el relleno predeterminado de la lista de usuarios */
+}
+
+#usuarios li {
+    list-style: none; /* Elimina los marcadores de lista */
+    margin-bottom: 5px; /* Espacio entre los usuarios en la lista */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los usuarios */
+}
+
+#usuarios li:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar sobre los usuarios */
+}
+
+.avatar-usuario {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
